@@ -67,7 +67,7 @@ int main()
 			
       auto outstream = std::ofstream(
 	"data_b" + std::to_string(block) + 
-	"_t" + std::to_string(thread) + ".json", 
+	"_t" + std::to_string(thread) + ".bson", 
 	std::ios::out | std::ios::binary);
 
       openblas_read_env();

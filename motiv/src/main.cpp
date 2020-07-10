@@ -123,6 +123,8 @@ int main()
 	    auto top    = nlohmann::json();
 	    top["data"] = log;
 	    auto binary = nlohmann::json::to_bson(top);
+
+	    outstream.seekp(0);
 	    outstream.write(reinterpret_cast<char*>(binary.data()), binary.size());
 	    outstream.flush();
 	  }
